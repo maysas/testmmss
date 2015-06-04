@@ -12,8 +12,8 @@ ERROR_EXIT () {
 # TEST1
 ###########################
 
-echo aaa bbb NG > $tmp-ans
-./same.py aaa bbb > $tmp-out || ERROR_EXIT "TEST1-1"
+echo 100 NG > $tmp-ans
+./mintest.bash 100 10 > $tmp-out || ERROR_EXIT "TEST1-1"
 diff $tmp-ans $tmp-out || ERROR_EXIT "TEST1-2"
 
 echo OK
