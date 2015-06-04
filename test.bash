@@ -14,7 +14,7 @@ ERROR_EXIT () {
 
 echo aaa bbb NG > $tmp-ans
 ./same.py aaa bbb > $tmp-out || ERROR_EXIT "TEST1-1"
-diff $temp-ans $temp-out || ERROR_EXIT "TEST1-2"
+diff $temp-ans $tmp-out || ERROR_EXIT "TEST1-2"
 
 echo OK
 rm -f $tmp-*
